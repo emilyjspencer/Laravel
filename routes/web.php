@@ -20,3 +20,12 @@ Route::get('/', function () {
 Route::get('/emily', function () {
     return view('emily');
 });
+
+
+Route::get('/jane', function () {
+
+    $name = request('name');
+
+    return $name;
+    
+});
