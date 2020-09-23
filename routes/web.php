@@ -32,8 +32,20 @@ Route::get('/jane', function () {
     
 });
 
-Route::get('films/{wild}', function () {
+Route::get('/films/{wild}', function () {
     return view('test');
+});
+
+Route::get('/songs/{wild}', function ($wild) {
+  return $wild;
+});
+
+Route::get('/pizzas/{topping}', function ($topping) {
+    return $topping;
+});
+
+Route::get('/jewellery/{earring}', function ($earring) {
+    return $earring;
 });
 
 
