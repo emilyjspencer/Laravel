@@ -13,17 +13,14 @@ class BooksController extends Controller
 
         $book = \DB::table('books')->where('slug', $slug)->first();
 
-
-        
-
-    
- 
-
+        if (! $book) {
+            abort(404);
+        }
     
 
-    return view('book', [
-        'book' => $book
-    ]);
+        return view('book', [
+          'book' => $book
+        ]);
 
     }
 
