@@ -59,6 +59,10 @@ Route::get('/books/{book}', function($book) {
         'book-six' => '#Girlboss'
     ];
 
+    if(! array_key_exists($book, $books)) {
+        abort(404, 'Sorry, that page was not found');
+    }
+
     return view('book', [
         'book' => $books[$book]
     ]);
