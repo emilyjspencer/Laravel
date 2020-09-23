@@ -26,6 +26,8 @@ Route::get('/jane', function () {
 
     $name = request('name');
 
-    return $name;
+    return view('jane', [
+        'name' => $name
+    ]);
     
 });
