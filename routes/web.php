@@ -31,3 +31,9 @@ Route::get('/jane', function () {
     ]);
     
 });
+
+Route::get('films/{wild}', function () {
+    return view('test');
+});
+
+
