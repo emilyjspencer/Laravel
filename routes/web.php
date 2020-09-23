@@ -48,4 +48,20 @@ Route::get('/jewellery/{earring}', function ($earring) {
     return $earring;
 });
 
+Route::get('/books/{book}', function($book) {
+
+    $books = [
+        'book-one' => 'Frankenstein',
+        'book-two' => 'Proust and the Squid',
+        'book-three' => 'Out of Africa',
+        'book-four' => 'Five on Brexit Island',
+        'book-five' => 'Year of Wonder',
+        'book-six' => '#Girlboss'
+    ];
+
+    return view('book', [
+        'book' => $books[$book]
+    ]);
+});
+
 
