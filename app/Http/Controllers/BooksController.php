@@ -15,12 +15,8 @@ class BooksController extends Controller
 
     {
     
-        $book = Book::where('slug', $slug)->first();
+        $book = Book::where('slug', $slug)->firstOrFail();
    
-
-        if (! $book) {
-            abort(404);
-        }
     
 
         return view('book', [
