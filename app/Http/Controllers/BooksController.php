@@ -4,14 +4,19 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use DB;
+use App\Models\Book;
+
+
+
 class BooksController extends Controller
 {
     public function show($slug)
 
     {
     
-
-        $book = \DB::table('books')->where('slug', $slug)->first();
+        $book = Book::where('slug', $slug)->first();
+   
 
         if (! $book) {
             abort(404);
