@@ -30,6 +30,14 @@ route::get('/songlist', function () {
     return view('songlist');
 });
 
+route::get('template', function () {
+    return view('template');
+});
+
+route::get('about', function () {
+    return view('about');
+});
+
 
 Route::get('/jane', function () {
 
