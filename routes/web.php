@@ -22,6 +22,14 @@ Route::get('/emily', function () {
     return view('emily');
 });
 
+Route::get('/booklist', function () {
+    return view('booklist');
+});
+
+route::get('/songlist', function () {
+    return view('songlist');
+});
+
 
 Route::get('/jane', function () {
 
@@ -49,6 +57,9 @@ Route::get('/jewellery/{earring}', function ($earring) {
     return $earring;
 });
 
+Route::get('/', function() {
+    return view('contact');
+});
 
 
 
