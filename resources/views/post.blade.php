@@ -58,7 +58,7 @@
                 <br>
                 <br>
 
-              <p>{{ $post }}</p>
+              <p>{{ $post->body }}</p>
                 </div>
             </body>
 </html>

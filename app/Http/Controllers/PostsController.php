@@ -6,22 +6,16 @@ use Illuminate\Http\Request;
 
 class PostsController extends Controller
 {
-  public function show ($post) 
+  public function show ($slug) 
   {
 
-    $posts = [
-        'post-one' => 'Hi there',
-        'post-two' => 'Bye',
-        'post-three' => 'Very wintery today',
-        'post-four' => 'Still freezing'
-    ];
+   // database connection
+   // making  a query against the posts table 
+   $post = \DB::table('posts')->where('slug', $slug)->first();
 
-    if( !array_key_exists($post, $posts)) {
-        abort(404, 'Sorry, post unavailable');
-    }
-
+    
     return view('post', [
-        'post' => $posts[$post]
+        'post' => $post
     ]);
       
   }

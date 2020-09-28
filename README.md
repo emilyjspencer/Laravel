@@ -201,3 +201,8 @@ A section needs to be created that corresponds to what is being yielded
 * Use Route::get   Route::post etc
 * Closures are provided to handle the routes logic
 * Define Controllers towards the bottom of the web.php file
+
+
+### Terms
+
+* slug - the URI you use to access the post
