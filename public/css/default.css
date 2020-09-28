@@ -468,7 +468,7 @@ ul.contact li a.icon-rss:before
 
 #menu .current_page_item a
 {
-	background: #1757ae;
+	background: #4e033e;
 	border-radius: 30px;
 	color: #FFF;
 }
@@ -494,13 +494,13 @@ ul.contact li a.icon-rss:before
 	overflow: hidden;
 	width: 1000px;
 	text-align: center;
-	color: rgba(255,255,255,.7);
+	color: rgba(241, 181, 241, 0.7);
 	font-size: 1.5em;
 }
 
 #banner a
 {
-	color: rgba(255,255,255,.9);
+	color: rgba(247, 196, 231, 0.9);
 }
 
 #banner h2
