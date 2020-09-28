@@ -4,7 +4,7 @@
           <meta charset="utf-8">
           <meta name="viewport" content="width=device-width, initial-scale=1">
 
-          <title>Welcome</title>
+          <title>Test</title>
 
           <link href="https://fonts.google.apis.com/css?family=Nunito:200,600 rel="stylesheet">
 
@@ -57,7 +57,7 @@
             <body>
               <div class="content">
                 <div class="title m-b-md">
-                  Welcome
+                  Test
                 </div>
 
                 <div class="links">
