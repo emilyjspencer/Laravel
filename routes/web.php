@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\BooksController;
+use App\Http\Controllers\PostsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +21,11 @@ Route::get('/', function () {
 Route::get('/test', function() {
     return view('test');
 });
+
+
+
+
+Route::get('/posts/{post}', [PostsController::class, 'show']);
 
 
 

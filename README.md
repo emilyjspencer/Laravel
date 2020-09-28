@@ -29,12 +29,12 @@ php artisan make:controller controllerName
 
 * In web.php - add the controller at the top of the file e.g.
 
-use App\Http\Controllers\BookControllers;
+use App\Http\Controllers\BooksController;
 
 
 near the bottom:
 ```
-Route::get('/books{book}', [BooksController:class, 'show']);
+Route::get('/books/{book}', [BooksController::class, 'show']);
 ```
 
 * All controllers should extend the BaseController class - which is also where we might
@@ -128,13 +128,12 @@ To return the first item:
 ```
 App\Models\ToDo::first();
 ```
-
-
+```
 
 
 ### Views
 
-### Views
+* Contain the HTML part of the codebase
 
 A good structure for the views folder would be as follows:
 
@@ -196,3 +195,9 @@ A section needs to be created that corresponds to what is being yielded
 ```
 
 
+### Routing
+
+* Routes are defined in routes/web.php
+* Use Route::get   Route::post etc
+* Closures are provided to handle the routes logic
+* Define Controllers towards the bottom of the web.php file
