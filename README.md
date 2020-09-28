@@ -202,6 +202,52 @@ A section needs to be created that corresponds to what is being yielded
 * Closures are provided to handle the routes logic
 * Define Controllers towards the bottom of the web.php file
 
+### Database connection
+
+With Windows:
+
+* Enter mysql -u root
+* Start MYSQL in XAMPP
+* Open TablePlus
+* Create a new MySQL connection
+* Create a new table
+* Add columns
+* Add rows
+* Save with ctrl + s
+* Disconnect if working with one command line by running 
+```
+\q
+```
+
+
+
+DB connection in Controller 
+NB CONTROLLERS SHOULD BE SKINNY - SO THIS LOGIC SHOULDN'T ACTUALLY BE HERE.
+DATABASE CONNECTION LOGIC SHOULD BE PLACED IN THE MODELS
+e.g. think Eloquent
+
+* This is used in order to access the DB class from the global namespace route
+* An example connection:
+
+```
+$posts = \DB::table('posts')->where('slug', $slug)->first();
+
+return view('post', [
+    'post' => $post
+])
+
+The correct attributes must be echoed out in the respective views
+
+```
+
+The following is known as the query builder - an API for constructing safe and secure SQL queries:
+```
+$posts = \DB::table('posts')->where('slug', $slug)->first();
+```
+
+
+
+
 
 ### Terms
 

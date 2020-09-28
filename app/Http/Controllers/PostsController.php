@@ -13,6 +13,9 @@ class PostsController extends Controller
    // making  a query against the posts table 
    $post = \DB::table('posts')->where('slug', $slug)->first();
 
+   if (! $post) {
+       abort(404);
+   } 
     
     return view('post', [
         'post' => $post
