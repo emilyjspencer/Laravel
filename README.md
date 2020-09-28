@@ -46,17 +46,40 @@ put shared controller logic
 Laravel's ORM - Eloquent - provides an ActiveRecord implementation for working with the database.
 * Just as with Rails, each database table has a corresponding Model which is used to interact
 with the table.
+* Same naming convention as Rails - use singular for the name of a Model
 * Models allow the developer to query the data in the database and add new data etc
+* Eloquent models provide the same API for performing SQL queries
 * All Eloquent models extend
 ```
 Illuminate\Database\Eloquent\Model
 ```
+* Store relevant business logic in the models
 
 
-To create a model:
+* To create a model:
 
 ```
 php artisan make:model Todo
+```
+
+* The model must also be pulled in to the relevant Controller
+
+e.g.
+
+PostsController:
+
+```
+<?php 
+
+namespace App\Http\Controllers;
+
+use App\Models\Post;
+```
+
+Connect to the DB (example):
+
+```
+$post = Post::where('slug', $slug)->first();
 ```
 
 ### Migrations

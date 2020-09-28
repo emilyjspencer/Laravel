@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Post;
+
 use Illuminate\Http\Request;
 
 class PostsController extends Controller
@@ -11,7 +13,8 @@ class PostsController extends Controller
 
    // database connection
    // making  a query against the posts table 
-   $post = \DB::table('posts')->where('slug', $slug)->first();
+
+   $post = Post::where('slug', $slug)->first();
 
    if (! $post) {
        abort(404);
