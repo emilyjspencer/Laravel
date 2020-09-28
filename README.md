@@ -117,6 +117,19 @@ php artisan migrate:reset
 * up() - for actually running the migrations/creating the table
 * down() - for rolling back or undoing the migration or dropping the table
 
+
+Eloquent's timestamp property is, by default:
+```
+ public $timestamps = true;
+```
+ 
+* Upon every saving or update or a record, Eloquent internally tries to inject the time to columns created_at and updated_at.
+* The following has to be added to the Eloquent model:
+``` 
+public $timestamps = false;
+```
+
+
 ### Creating a model, controller and migration simulataneously
 
 * Just a Rails provides generators to generate a model, controller and migration,
