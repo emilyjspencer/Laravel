@@ -58,7 +58,10 @@
                 <br>
                 <br>
 
+              <h2>{{ $post->title }}</h2>
+              <h3>{{ $post->topic }}</h2>
               <p>{{ $post->body }}</p>
+
                 </div>
             </body>
 </html>

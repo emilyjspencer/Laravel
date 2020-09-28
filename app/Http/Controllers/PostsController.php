@@ -12,13 +12,11 @@ class PostsController extends Controller
   {
 
    // database connection
-   // making  a query against the posts table 
+   // making  a query 
 
-   $post = Post::where('slug', $slug)->first();
+   $post = Post::where('slug', $slug)->firstOrFail();
 
-   if (! $post) {
-       abort(404);
-   } 
+  
     
     return view('post', [
         'post' => $post
