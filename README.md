@@ -131,3 +131,68 @@ App\Models\ToDo::first();
 
 
 
+
+### Views
+
+### Views
+
+A good structure for the views folder would be as follows:
+
+views
+  -- layouts
+    - default.blade.php
+    - sidebar.blade.php
+  --pages
+    - pageOne.blade.php
+    - pageTwo.blade.php
+    - pageThree.blade.php
+    - pageFour.blade.php
+    - pageFive.blade.php
+  --includes
+    head.blade.php
+    header.blade.php
+    footer.blade.php
+    sidebar.blade.php
+
+
+views/layouts/default.blade.php would have the general layout/structure
+views/layout/sidebar.blade.php would contain the layout of the sidebar
+views/pages/pageOne would contain the content specific to page one
+(the same applies for all pages)
+views/head.blade.php
+views/header.blade.php - header
+views/footer.blade.php - footer
+views/sidebar.blade.php - sidebar
+
+@includes is used to bring in code snippets
+```
+<header>
+  @include('includes.header)
+</header>
+
+@yield is used to bring in content from invidual pages
+
+@extends is used to extend the layout to individual pages
+
+```
+@extends('layouts.default')
+@section('content')
+  Content goes here
+@stop or     @endsection
+
+@section and @endsection are directives - they comes from Larave's Blade templating engine
+
+@section and @endsection go in the individual page files
+
+@yield goes in the layout file - layout.blade.php or layouts/default.blade.php and different things
+can be yielded if needs be
+
+A section needs to be created that corresponds to what is being yielded
+
+* The request() helper function can be used to make selected menu items active/highlighted:
+
+```
+(request()-> is('/')) ? 'current_page_item' : '' }}
+```
+
+
