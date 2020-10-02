@@ -31,11 +31,11 @@ Route::get('/template', function() {
 });
 
 Route::get('/about', function() {
+  $articles = App\Models\Article::take(4)->latest()->get();
 
-    $article = App\Models\Article::all();
-
-    return $article;
-   // return view('about');
+     return view('about', [
+         'articles' => $articles
+     ]);
 });
 
 Route::get('/ourclients', function() {

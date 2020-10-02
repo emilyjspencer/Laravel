@@ -296,3 +296,19 @@ php artisan migrate:fresh
 Drops all of the existing tables without rolling back 
 The 'fresh' keyword runs the migrations.
 (This fixed an issue I had when I tried to create the articles table)
+
+In the models, other methods can be called to show a certain number of records per page:
+```
+$article = App\Models\Article::take(2)->get();
+```
+shows two articles all together
+```
+$article = App\Models\Article::paginate(2);
+```
+
+shows two articles per page
+
+To show the most recent article first, use the latest() method :
+
+```
+$article = App\Models\Article::latest()->get();
