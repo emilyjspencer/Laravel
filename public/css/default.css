@@ -371,6 +371,8 @@ ul.contact li a.icon-rss:before
 	 background: #2b2b2b url(../images/banner.jpg) no-repeat center; background-size: auto 100%; 
 }
 
+#header-wrapper { background: #2b2b2b url(../images/banner.jpg) no-repeat center; background-size: auto 100%; }
+
 #header
 {
 	position: relative;
@@ -471,6 +473,11 @@ ul.contact li a.icon-rss:before
 	background: #4e033e;
 	border-radius: 30px;
 	color: #FFF;
+}
+
+.active 
+{
+	background: #4e033e;
 }
 
 /*********************************************************************************/

@@ -1,14 +1,11 @@
-
 @extends ('layout3')
 
-@section ('header')
-
-@endsection
+@section ('content')
 
             <body>
               <div class="content">
                 <div class="title m-b-md">
-                  Welcome
+                 Our Clients
                 </div>
 
                 <div class="links">
@@ -22,5 +19,6 @@
 
                 </div>
             </body>
-</html>
 
+            @endsection
+</html>

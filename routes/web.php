@@ -26,6 +26,21 @@ Route::get('/contact', function() {
     return view('contact');
 });
 
+Route::get('/template', function() {
+    return view('template');
+});
+
+Route::get('/about', function() {
+    return view('about');
+});
+
+Route::get('/ourclients', function() {
+    return view('ourclients');
+});
+
+Route::Get('/careers', function() {
+    return view('careers');
+});
 
 
 

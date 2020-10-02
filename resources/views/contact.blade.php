@@ -1,6 +1,8 @@
-@extends ('layout')
+@extends ('layout3')
 
-@section ('content')
+@section ('header')
+
+
 
 
 <style>
@@ -15,7 +17,7 @@ ul li {
 
 </style>
 
-<h1 align="center">CONTACT ME</h1>
+<h1 align="center">CONTACT US</h1>
 <ul>
       <li>Phone number: ..............</li>
       <li>Email: ..............</li>
