@@ -53,3 +53,5 @@ Route::get('/posts/{post}', [PostsController::class, 'show']);
 
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
+Route::get('/articles', [ArticlesController::class, 'index']);
+
