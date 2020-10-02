@@ -31,7 +31,11 @@ Route::get('/template', function() {
 });
 
 Route::get('/about', function() {
-    return view('about');
+
+    $article = App\Models\Article::all();
+
+    return $article;
+   // return view('about');
 });
 
 Route::get('/ourclients', function() {

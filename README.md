@@ -288,3 +288,11 @@ $posts = \DB::table('posts')->where('slug', $slug)->first();
 ### Terms
 
 * slug - the URI you use to access the post
+
+```
+php artisan migrate:fresh
+```
+
+Drops all of the existing tables without rolling back 
+The 'fresh' keyword runs the migrations.
+(This fixed an issue I had when I tried to create the articles table)
