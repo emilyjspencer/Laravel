@@ -140,7 +140,8 @@ php artisan make:model ModelName -mc
 
 ### Laravel's REPL
 
-Just as Rails offers its own REPL - the Rails console, where we can manually add data and more generally manipulate data in the databases, Laravel also provides a REPL - psy
+Just as Rails offers its own REPL - the Rails console, where we can manually add data and more generally manipulate data in the databases, Laravel also provides a REPL  - **tinker**
+
 * This can be opened with the following command:
 ```
 php artisan tinker
@@ -312,3 +313,9 @@ To show the most recent article first, use the latest() method :
 
 ```
 $article = App\Models\Article::latest()->get();
+
+
+
+### Common errors
+
+Must add the controllers to the web.php file, otherwise an error will be thrown stating that the Controller doesn't exist.

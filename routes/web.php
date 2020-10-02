@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PostsController;
+use App\Http\Controllers\ArticlesController;
 
 /*
 |--------------------------------------------------------------------------
@@ -50,5 +51,5 @@ Route::Get('/careers', function() {
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
-
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
