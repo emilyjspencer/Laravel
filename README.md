@@ -308,6 +308,22 @@ $article = App\Models\Article::latest()->get();
 * update - persists the edited resource
 * destroy - delets a resource
 
+### Generate a Controller with all seven actions:
+
+Use the following command to generate a Controller with its seven RESTful actions:
+
+```
+php artisan make:controller ControllerName -r
+```
+
+Use the following command to generate a Controll with its seven RESTful actions and its associated model:
+```
+php artisan make:controller ControllerName -r -m ModelName
+```
+
+e.g.
+php artisan make:controller BooksController -r -m Book
+
 
 ### Common errors
 
