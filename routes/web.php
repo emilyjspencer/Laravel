@@ -49,12 +49,19 @@ Route::Get('/careers', function() {
 
 
 
-Route::get('/posts/{post}', [PostsController::class, 'show']);
+
 
 Route::get('/articles', [ArticlesController::class, 'index']);
 
-Route::get('/articles', [ArticlesController::class, 'update']);
+Route::post('/articles', [ArticlesController::class, 'store']);
+
+
 
 Route::get('/articles/create', [ArticlesController::class, 'create']);
+
+Route::get('/posts/{post}', [PostsController::class, 'show']);
+
+
+
 
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);

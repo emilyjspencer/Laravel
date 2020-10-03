@@ -3,9 +3,10 @@
 
   <div id="wrapper">
       <div id="page" class="container">
-          <h1>New Article</h1>
+          <h1 class="heading has-text-weight-bold is-size-4">New Article</h1>
 
-          <form action="">
+          <form action="/articles" method="POST">
+          @csrf
               <div class="field">
                   <label class="label" for="title">Title</label>
 

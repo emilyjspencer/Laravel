@@ -25,21 +25,31 @@ class ArticlesController extends Controller
       return view('articles.create');
     }
 
-    public function store() {
+    public function store() 
+    {
+        // persist the new article
+      $article = new Article();
+      $article->title = request('title');
+      $article->excerpt = request('excerpt');
+      $article->body = request('body');
+      $article->save();
+      return redirect('/articles');
+
+    }
+
+    public function edit()
+     {
+
+    }
+
+    public function update()
+     {
 
 
     }
 
-    public function edit() {
-
-    }
-
-    public function update() {
-
-
-    }
-
-    public function destroy() {
+    public function destroy()
+     {
 
          
     }
