@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 
 class ArticlesController extends Controller
 {
+
+
     public function show($id)
     {
        $article = Article::find($id);
@@ -15,13 +17,15 @@ class ArticlesController extends Controller
 
     }
 
-    public function index() {
+    public function index() 
+    {
         $articles = Article::latest()->get();
 
         return view('articles.index', ['articles' => $articles]);
     }
 
-    public function create() {
+    public function create()
+     {
       return view('articles.create');
     }
 
@@ -37,8 +41,11 @@ class ArticlesController extends Controller
 
     }
 
-    public function edit()
+    public function edit($id)
      {
+         $article = Article::find($id);
+
+         return view('articles.edit', ['article' => $article]);
 
     }
 
