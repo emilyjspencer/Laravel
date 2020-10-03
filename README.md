@@ -308,6 +308,58 @@ $article = App\Models\Article::latest()->get();
 * update - persists the edited resource
 * destroy - delets a resource
 
+### Using REST
+
+Verbs shouldn't be put into the URI e.g.
+
+this shouldn't happen:
+```
+/posts/:id/edit
+```
+or
+```/users/:id/update
+```
+
+Instead, intent should be communicated by using the HTTP verbs
+* GET
+* PUT
+* POST
+* PATCH
+* DELETE
+
+GET /posts - get all posts
+GET /posts/:id - get a particular post
+POST /posts - create a new post
+PUT /posts:id - update/edit a particular post
+DELETE /posts/:id - delete a particular post
+
+Any operation can be handled by combining the HTTP verbs with a URI structure
+
+There is a sort of mapping from the HTTP verbs to the CRUD actions
+
+GET /posts - view all posts
+Get /posts/2 - view the post with an id of 2
+PUT /posts/2 - update the post with an id of 2 (the act of updating)
+DELETE /posts/2 - delete the post with an id of 2
+GET /posts/2/edit - display a form to edit a post with an id of 2
+GET /posts/create - display a form to create a new posts
+POST /posts - when the form to create a new posts is submitted - a POST request is made
+
+More specific actions e.g. if a user wanted to subscribe to blog posts, you can't do the following:
+```
+GET /posts/subscribe
+```
+
+but could do:
+```
+POST /posts/subscriptions
+```
+POST /posts/subscriptions => PostSubscriptionsController@store
+
+
+
+
+
 ### Generate a Controller with all seven actions:
 
 Use the following command to generate a Controller with its seven RESTful actions:
