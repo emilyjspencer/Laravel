@@ -313,7 +313,17 @@ To show the most recent article first, use the latest() method :
 
 ```
 $article = App\Models\Article::latest()->get();
+```
 
+The seven Controller actions:
+
+* index - renders a list of resources
+* show - shows a particular resource
+* create - shows a view to create a new resource e.g. a page with a form
+* store - persists the new resource that has just been created
+* edit - shows a view to edit an existing resource
+* update - persists the edited resource
+* destroy - delets a resource
 
 
 ### Common errors

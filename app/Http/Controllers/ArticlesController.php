@@ -20,4 +20,28 @@ class ArticlesController extends Controller
 
         return view('articles.index', ['articles' => $articles]);
     }
+
+    public function create() {
+
+    }
+
+    public function store() {
+
+
+    }
+
+    public function edit() {
+
+    }
+
+    public function update() {
+
+
+    }
+
+    public function destroy() {
+
+         
+    }
 } 
+
