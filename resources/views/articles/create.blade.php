@@ -32,6 +32,12 @@
                   </div>
              </div>
 
+             <div class="field is-grouped">
+                <div class="control">
+                   <button class="button is-link" type="submit">Submit</button>
+                </div>
+            </div>
+
           </form>
   </div>
 
