@@ -357,6 +357,27 @@ POST /posts/subscriptions
 POST /posts/subscriptions => PostSubscriptionsController@store
 
 
+### The order of the routes in routes/web.php matter
+
+e.g.
+
+```
+Route::get('/posts/{post}', [PostsController::class, 'show']);
+
+Route::get('/articles', [ArticlesController::class, 'index']);
+
+Route::get('/articles', [ArticlesController::class, 'update']);
+
+Route::get('/articles/create', [ArticlesController::class, 'create']);
+
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
+```
+
+This is fine as the route with the wildcard - /articles{article}
+is at the bottom.
+If it weren't however, it would take precedence over any routes that are defined below it and thus,
+an error would be thrown.
+
 
 
 

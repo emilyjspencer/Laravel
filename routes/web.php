@@ -51,11 +51,10 @@ Route::Get('/careers', function() {
 
 Route::get('/posts/{post}', [PostsController::class, 'show']);
 
-Route::get('/articles/{article}', [ArticlesController::class, 'show']);
-
 Route::get('/articles', [ArticlesController::class, 'index']);
 
 Route::get('/articles', [ArticlesController::class, 'update']);
 
+Route::get('/articles/create', [ArticlesController::class, 'create']);
 
-
+Route::get('/articles/{article}', [ArticlesController::class, 'show']);
