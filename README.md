@@ -1,25 +1,6 @@
 # Learning Laravel
 
 
-
-### Learnings
-
-I faced an issue with the database.
-Was solved with the following:
-
-* composer update
-* composer require doctrin/dbal
-* php artisan cache:clear
-* php artisan view:clear
-* php artisan route:clear
-* Opened php.ini from desktop
-* Uncommented ;extension-pdo_mysql by removing ;
-* Restarted the Apache server
-* Restarted mySQL
-
-
-dd() - dump and die - is used to inspect variables and stop the execution
-
 ### Controllers
 
 * Create a controller:
@@ -290,6 +271,8 @@ $posts = \DB::table('posts')->where('slug', $slug)->first();
 
 * slug - the URI you use to access the post
 
+* dd() - dump and die - is used to inspect variables and stop the execution
+
 ```
 php artisan migrate:fresh
 ```
@@ -315,7 +298,7 @@ To show the most recent article first, use the latest() method :
 $article = App\Models\Article::latest()->get();
 ```
 
-The seven Controller actions:
+### The seven Controller actions:
 
 * index - renders a list of resources
 * show - shows a particular resource
@@ -329,3 +312,21 @@ The seven Controller actions:
 ### Common errors
 
 Must add the controllers to the web.php file, otherwise an error will be thrown stating that the Controller doesn't exist.
+
+
+### Learnings
+
+I faced an issue with the database.
+Was solved with the following:
+
+* composer update
+* composer require doctrin/dbal
+* php artisan cache:clear
+* php artisan view:clear
+* php artisan route:clear
+* Opened php.ini from desktop
+* Uncommented ;extension-pdo_mysql by removing ;
+* Restarted the Apache server
+* Restarted mySQL
+
+
