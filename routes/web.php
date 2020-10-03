@@ -67,3 +67,5 @@ Route::get('/posts/{post}', [PostsController::class, 'show']);
 Route::get('/articles/{article}', [ArticlesController::class, 'show']);
 
 Route::get('/articles/{article}/edit', [ArticlesController::class, 'edit']);
+
+Route::get('/articles/{article}', [ArticlesController::class, 'update']);

@@ -5,8 +5,9 @@
       <div id="page" class="container">
           <h1 class="heading has-text-weight-bold is-size-4">Edit Article</h1>
 
-          <form action="/articles" method="POST">
+          <form action="/articles/{{ $article->id }}" method="POST">
           @csrf
+          @method('PUT')
               <div class="field">
                   <label class="label" for="title">Title</label>
 

@@ -31,6 +31,8 @@ class ArticlesController extends Controller
 
     public function store() 
     {
+
+       
         // persist the new article
       $article = new Article();
       $article->title = request('title');
@@ -45,13 +47,22 @@ class ArticlesController extends Controller
      {
          $article = Article::find($id);
 
-         return view('articles.edit', ['article' => $article]);
+         return view('articles.edit', compact('article'));
 
     }
 
-    public function update()
+    public function update($id)
      {
 
+        
+
+        $article = Article::find($id);
+        $article->title = request('title');
+        $article->excerpt = request('excerpt');
+        $article->body = request('body');
+        $article->save();
+
+        return redirect('/articles/' . $article->id);
 
     }
 
