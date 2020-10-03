@@ -7,7 +7,7 @@
 
           <form action="/articles" method="POST">
           @csrf
-          //FIELD
+        
             <div class="field">
                 <label class="label" for="title">Title</label>
 
@@ -19,7 +19,7 @@
                     name="title" 
                     id="title"
 
-                    //KEEPING THE input AFTER REFRESH
+               
                     value="{{ old('title') }}">
                     @error ('title')
                     <p class="help is-danger">{{ $errors->first('title') }}</p>
@@ -28,10 +28,9 @@
                 </div>
             </div>
 
-            //FIELD END
+        
 
 
-            //FIELD
             <div class="field">
                 <label class="label" for="excerpt">Excerpt</label>
 
@@ -50,9 +49,7 @@
                 @enderror
                 </div> 
             </div>
-            //FIELD END
-
-            //FIELD
+           
             <div class="field">
                 <label class="label" for="body">Body</label>
 
@@ -72,7 +69,7 @@
                     @enderror
                 </div> 
             </div>
-            //ENDFIELD
+       
 
             <div class="field is-grouped">
                 <div class="control">

@@ -29,9 +29,14 @@ class ArticlesController extends Controller
       return view('articles.create');
     }
 
-    public function store() 
+    public function store(Request $request) 
     {
 
+        $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
        
         // persist the new article
       $article = new Article();
@@ -51,10 +56,14 @@ class ArticlesController extends Controller
 
     }
 
-    public function update($id)
+    public function update($id, Request $request)
      {
 
-        
+        $request->validate([
+            'title' => 'required',
+            'excerpt' => 'required',
+            'body' => 'required'
+        ]);
 
         $article = Article::find($id);
         $article->title = request('title');
